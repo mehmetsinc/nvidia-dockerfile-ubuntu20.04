@@ -2,7 +2,7 @@ FROM nvidia/cuda:11.4.0-base-ubuntu20.04
 
 # Set the working directory
 WORKDIR /root
-ENV TZ=Europe/Berlin
+ENV TZ=Europe/Berlin \
     DEBIAN_FRONTEND=noninteractive
 
 # Update and install required packages
