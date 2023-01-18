@@ -84,7 +84,7 @@ This command maps the ports from the host to the container, and the -v flag maps
 
 If you want to run the container in detached mode(without opening the terminal) you can use -d flag
 
-    docker run -p 22:22 -p 3389:3389 -p 6080:6080 -v /path/to/host/shared:/home/shared --privileged -d container_name
+    docker run -p 22:22 -p 3389:3389 -p 6080:6080 --gpus all -v /path/to/host/shared:/home/shared --privileged -d container_name
 
 You can now access the container via VNC on port 6080, RDP on port 3389, or via SSH on port 22.
 The default username and password is ubuntu:password
