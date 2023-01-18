@@ -78,7 +78,7 @@ The "-t" option is used to specify the name of the container, and the "." at the
 
 Once the container is built, you can run it by using the following command:
 
-    docker run -p 22:22 -p 3389:3389 -p 6080:6080 -v /path/to/host/shared:/home/shared --privileged -it container_name
+    docker run -p 22:22 -p 3389:3389 -p 6080:6080 --gpus all -v /path/to/host/shared:/home/shared --privileged -it container_name
 
 This command maps the ports from the host to the container, and the -v flag maps the host directory "/path/to/host/shared" to the container directory "/home/shared" so that you can access files in the shared folder.
 
